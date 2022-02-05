@@ -8,6 +8,7 @@ const UserSchema = mongoose.Schema({
     type: String,
     minlength: [3, "Minimum 3 letter Requred"],
     maxlength: [50, "Maximum 50 Letter suported"],
+    unique: true
   },
   email: {
     type: String,

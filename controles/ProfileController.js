@@ -17,6 +17,7 @@ const setProfile = async (req, res) => {
     "address",
     "city",
     "postCode",
+    "name",
   ]);
   updateProfile["user"] = userId;
 

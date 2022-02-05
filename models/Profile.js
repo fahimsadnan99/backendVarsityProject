@@ -8,6 +8,10 @@ const profileSchema = mongoose.Schema({
     unique: true,
     ref: "User",
   },
+  name: {
+    type: String,
+    required: true,
+  },
   phone: String,
   address: String,
   city: String,
