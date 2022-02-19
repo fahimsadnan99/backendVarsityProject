@@ -7,6 +7,7 @@ const {
   getProductById,
   updateProductById,
   filterProducts,
+  deleteProduct
 } = require("../controles/ProductControler");
 const upload = require("../middlewares/multer")
 
@@ -20,7 +21,8 @@ Routers.route("/")
 
 Routers.route("/:id")
   .get(getProductById)
-  .put([authorizationUser, AuthAdmin],upload.single("file"), updateProductById);
+  .put([authorizationUser, AuthAdmin], upload.single("file"), updateProductById)
+  .delete(deleteProduct)
 
 Routers.route("/filter")
 .post(filterProducts)

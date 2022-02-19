@@ -26,6 +26,15 @@ const createProduct = async (req, res) => {
   });
 };
 
+const deleteProduct = async (req, res) => {
+  const _id = req.params.id
+
+  const deleteData = await ProductSchema.findByIdAndDelete({ _id })
+  return res.status(200).json({
+    message : "Product Deleted Successfully"
+  })
+}
+
 const getProductById = async (req, res) => {
   const _id = req.params.id;
 
@@ -108,4 +117,5 @@ module.exports = {
   getProductById,
   updateProductById,
   filterProducts,
+  deleteProduct,
 };

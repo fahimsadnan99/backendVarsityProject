@@ -11,6 +11,6 @@ App.listen(PORT, () => {
 });
 
 mongoose.connect(DB, { useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false, useUnifiedTopology: true })
-    .then(() => console.log("Database Connect Successful"))
+    .then(() => console.log("DATABASE CONNECTION Established"))
     .catch(() => console.log("Database Connection Faild"))
 
